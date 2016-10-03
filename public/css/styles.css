@@ -100,7 +100,7 @@ body {
 
 /* line 4, ../sass/styles.scss */
 body {
-  background-color: black;
+  background-color: blue;
 }
 
 /* line 7, ../sass/styles.scss */
@@ -113,20 +113,27 @@ h4 {
 }
 
 /* line 15, ../sass/styles.scss */
+h3 {
+  color: white;
+  font-size: 30px;
+  text-align: center;
+}
+
+/* line 21, ../sass/styles.scss */
 h2 {
   color: white;
   font-size: 50px;
   text-align: center;
 }
 
-/* line 21, ../sass/styles.scss */
+/* line 27, ../sass/styles.scss */
 p {
   text-align: center;
   font-size: 20px;
   color: white;
 }
 
-/* line 27, ../sass/styles.scss */
+/* line 33, ../sass/styles.scss */
 #login {
   margin-top: 25px;
   width: 200px;
@@ -134,7 +141,7 @@ p {
   background-color: yellow;
 }
 
-/* line 34, ../sass/styles.scss */
+/* line 40, ../sass/styles.scss */
 #registro {
   margin-top: 30px;
   width: 200px;
@@ -142,13 +149,13 @@ p {
   background-color: yellow;
 }
 
-/* line 42, ../sass/styles.scss */
+/* line 48, ../sass/styles.scss */
 .seccioninicio {
   text-align: center;
 }
 
-/* line 46, ../sass/styles.scss */
-.input-logueo {
+/* line 52, ../sass/styles.scss */
+.input {
   display: inline-block;
   width: 400px;
   height: 50px;
@@ -159,8 +166,26 @@ p {
   border-radius: 50px;
 }
 
-/* line 57, ../sass/styles.scss */
-.seccionlog {
+/* line 63, ../sass/styles.scss */
+.seccion {
   margin-top: 30px;
   text-align: center;
+}
+
+/* line 69, ../sass/styles.scss */
+#imagenstarwars {
+  width: 100px;
+}
+
+/* line 73, ../sass/styles.scss */
+.titulociudad {
+  color: white;
+  text-align: center;
+}
+
+/* line 78, ../sass/styles.scss */
+.temperatura {
+  color: white;
+  text-align: center;
+  font-size: 20px;
 }

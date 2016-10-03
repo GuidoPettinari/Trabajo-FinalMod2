@@ -6,7 +6,7 @@ var registration = function () {
 
 
   $('#botonregistro').on('click',function(){
-    var nuevoid = $('#nombreregistro').val() + $('#emailregistro').val();
+    var nuevoid = localStorage.length + 1;
     var nuevonombre = $('#nombreregistro').val();
     var nuevoapellido = $('#apellidoregistro').val();
     var nuevousuario = $('#usuarioregistro').val();
@@ -24,20 +24,36 @@ var registration = function () {
 
 
     var nuevousuario = new constructorUsuarios (nuevoid,nuevonombre,nuevoapellido,nuevousuario,nuevoemail,nuevopass)
-    if (localStorage.length > 1) {
-    for (i=0;i<localStorage.length;i++) {
-      if (nuevousuario.Id === localStorage.getItem(i)) {
 
-      console.log("YA ESTA REGISTRADO");
-      }
-     else {
-      localStorage.setItem(nuevousuario.Id,JSON.stringify(nuevousuario));
-      }
-    };
+    if (localStorage.length > 0) {
 
-  } else {
+
+      for (i=1;i<=localStorage.length;i++){
+          var checkUsuario = JSON.parse(localStorage.getItem(i));
+
+        if (nuevousuario.usuario === checkUsuario.usuario || nuevousuario.email === checkUsuario.email) {
+          console.log("YA ESTA REGISTRADO");
+          return
+        }
+        else {
     localStorage.setItem(nuevousuario.Id,JSON.stringify(nuevousuario));
+    app.loadTemplate('contenedorGeneral','logueo')
+    return
   }
-  });
+  }
+}else {
+    localStorage.setItem(nuevousuario.Id,JSON.stringify(nuevousuario));
+    app.loadTemplate('contenedorGeneral','logueo',login);
+    return
+  }
+
+});
+
+
+$('#botonback').on('click',function(){
+  app.loadTemplate('contenedorGeneral','inicio',myscripts);
+
+})
+
 
 };

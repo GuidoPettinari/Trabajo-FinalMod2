@@ -4,7 +4,7 @@ var myscripts = function() {
 
 //VA A LA PAGINA DE LOGIN
 $('#login').on('click',function(){
-  app.loadTemplate('contenedorGeneral','logueo');
+  app.loadTemplate('contenedorGeneral','logueo',login);
 });
 
 //VA A LA PAGINA DE REGISTRO

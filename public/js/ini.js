@@ -3,10 +3,11 @@ router = function() {
     Router.evalRoute = function(view) {
         var pathName = $(location).attr("pathname");
 
-
+        if(sessionStorage.getItem('user') !== null) {
+          app.loadTemplate("contenedorGeneral",'dashboard',dashboard);
+        } else {
          app.loadTemplate("contenedorGeneral",'inicio',myscripts);
-
-
+       }
     };
 
     return Router;
